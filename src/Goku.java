@@ -22,6 +22,7 @@ public class Goku extends Frame {
 		// Colors
 		Color gokuBlack = new Color(0, 0, 0);
 		Color gokuRed1 = new Color(210, 20, 20);
+		Color gokuRed2 = new Color(145, 0, 0);
 		Color gokuYellow1 = new Color(240, 225, 40);
 		Color gokuBlue1 = new Color(30, 60, 190);
 		Color gokuSkin1 = new Color(255, 200, 150);
@@ -115,6 +116,52 @@ public class Goku extends Frame {
 		graphSkin1.setColor(gokuSkin1);
 		graphSkin1.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphSkin1.fill(skin1);
+		
+		Graphics2D graphShirtShade1 = (Graphics2D) g;
+		GeneralPath shirtShade1 = new GeneralPath();
+		
+		shirtShade1.moveTo(335, 460);
+		shirtShade1.quadTo(349, 447, 356, 437);
+		shirtShade1.curveTo(366, 429, 367, 426, 372, 418);
+		shirtShade1.curveTo(377, 425, 380, 409, 393, 416);
+		shirtShade1.curveTo(394, 424, 395, 433, 394, 438);
+		shirtShade1.curveTo(382, 436, 348, 461, 335, 460);
+		graphShirtShade1.setColor(gokuRed2);
+		graphShirtShade1.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphShirtShade1.fill(shirtShade1);
+		
+		Graphics2D graphLeftArm = (Graphics2D) g;
+		GeneralPath leftArm = new GeneralPath();
+		
+		leftArm.moveTo(394, 431);
+		leftArm.lineTo(412, 417);
+		leftArm.curveTo(426, 416, 426, 420, 432, 419);
+		leftArm.curveTo(441, 418, 448, 414, 459, 415);
+		leftArm.quadTo(468, 418, 468, 469);
+		leftArm.curveTo(454, 469, 448, 476, 401, 476);
+		leftArm.lineTo(390, 469);
+		leftArm.quadTo(393, 456, 394, 431);
+		
+		graphLeftArm.setColor(gokuSkin1);
+		graphLeftArm.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphLeftArm.fill(leftArm);
+		
+		
+		
+		
+		
+		Graphics2D graphFaceOutline = (Graphics2D) g;
+		GeneralPath faceOutline = new GeneralPath();
+		
+		faceOutline.moveTo(378, 409);
+		faceOutline.curveTo(358, 438, 353, 446, 302, 449);
+		faceOutline.curveTo(291, 451, 278, 447, 273, 445);
+		faceOutline.curveTo(229, 419, 214, 415, 215, 375);
+		graphFaceOutline.setColor(gokuBlack);
+		graphFaceOutline.setStroke(hairLine);
+		graphFaceOutline.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphFaceOutline.draw(faceOutline);
+		
     }
     
     public static void main (String[] args) {
