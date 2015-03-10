@@ -232,9 +232,29 @@ public class Goku extends Frame {
 		graphLeftHandShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphLeftHandShade.fill(leftHandShade);
 		
+		Graphics2D graphRightArm = (Graphics2D) g;
+		GeneralPath rightArm = new GeneralPath();
+		rightArm.moveTo(184, 382);
+		rightArm.curveTo(178, 383, 159, 364, 135, 365);
+		rightArm.curveTo(132, 361, 122, 356, 117, 355);
+		rightArm.curveTo(112, 350, 90, 373, 88, 401);
+		rightArm.curveTo(148, 434, 164, 431, 169, 440);
+		rightArm.closePath();
+		graphRightArm.setColor(gokuSkin1);
+		graphRightArm.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightArm.fill(rightArm);
 		
-		
-		
+		Graphics2D graphRightArmShade = (Graphics2D) g;
+		GeneralPath rightArmShade = new GeneralPath();
+		rightArmShade.moveTo(169, 440);
+		rightArmShade.curveTo(164, 431, 148, 434, 88, 401);
+		rightArmShade.quadTo(88, 413, 90, 414);
+		rightArmShade.curveTo(103, 425, 96, 415, 125, 433);
+		rightArmShade.curveTo(134, 440, 158, 444, 169, 455);
+		rightArmShade.closePath();
+		graphRightArmShade.setColor(gokuSkin2);
+		graphRightArmShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightArmShade.fill(rightArmShade);
 		
 		
 		
@@ -259,8 +279,15 @@ public class Goku extends Frame {
 		Graphics2D graphShirtOutline = (Graphics2D) g;
 		GeneralPath shirtOutline = new GeneralPath();
 		
-		shirtOutline.moveTo(378, 500);
+		shirtOutline.moveTo(377, 501); //left sleeve
 		shirtOutline.curveTo(382, 488, 396, 461, 393, 416);
+		shirtOutline.moveTo(378, 476);
+		shirtOutline.curveTo(380, 443, 379, 512, 370, 523);
+		
+		shirtOutline.moveTo(185, 382); //right sleeve
+		shirtOutline.curveTo(177, 411, 162, 450, 172, 466);
+		shirtOutline.moveTo(181, 439);
+		shirtOutline.curveTo(167, 477, 174, 478, 168, 497);
 		graphShirtOutline.setColor(gokuBlack);
 		graphShirtOutline.setStroke(hairLine);
 		graphShirtOutline.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
