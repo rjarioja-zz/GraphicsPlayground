@@ -34,11 +34,13 @@ public class Goku extends Frame {
         BasicStroke outLine = new BasicStroke(1.75f);
 		//BasicStroke outLine = new BasicStroke(3.0f);
         
-		// Colors
-		Color gokuBlack = new Color(0, 0, 0);
+		//Colors
+		Color gokuBlack1 = new Color(0, 0, 0);
+		Color gokuBlack2 = new Color(25, 25, 25);
 		Color gokuRed1 = new Color(210, 20, 20);
 		Color gokuRed2 = new Color(145, 0, 0);
 		Color gokuYellow1 = new Color(240, 225, 40);
+		Color gokuYellow2 = new Color(218, 199, 0);
 		Color gokuBlue1 = new Color(30, 60, 190);
 		Color gokuBlue2 = new Color(15, 30, 75);
 		Color gokuSkin1 = new Color(255, 200, 150);
@@ -75,7 +77,7 @@ public class Goku extends Frame {
 		hairLine3.curveTo(475, 260, 525, 250, 566, 252);
 		hairLine4.moveTo(472, 339);
 		hairLine4.lineTo(555, 333);
-		graphHair.setColor(gokuBlack);
+		graphHair.setColor(gokuBlack1);
 		graphHair.setStroke(hairLine);
 		graphHair.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphHair.fill(hair);
@@ -90,7 +92,7 @@ public class Goku extends Frame {
 		shirt.curveTo(177, 411, 162, 450, 172, 466);
 		shirt.lineTo(172, 481);
 		shirt.curveTo(160, 495, 150, 500, 156, 511);
-		shirt.curveTo(146, 585, 365, 605, 375, 533);
+		shirt.curveTo(146, 575, 365, 600, 375, 533);
 		shirt.lineTo(371, 522);
 		shirt.curveTo(378, 510, 379, 492, 379, 488);
 		shirt.curveTo(389, 480, 393, 460, 394, 438);
@@ -144,20 +146,93 @@ public class Goku extends Frame {
 		graphNeckShade.fill(neckShade);
 		
 		Graphics2D graphShirtShade1 = (Graphics2D) g;
-		GeneralPath shirtShade1 = new GeneralPath();
-		shirtShade1.moveTo(335, 460);
-		shirtShade1.quadTo(349, 447, 356, 437);
-		shirtShade1.curveTo(366, 429, 367, 426, 372, 418);
-		shirtShade1.curveTo(377, 425, 380, 409, 393, 416);
-		shirtShade1.curveTo(394, 424, 395, 433, 394, 438);
-		shirtShade1.curveTo(382, 436, 348, 461, 335, 460);
-		shirtShade1.moveTo(378, 500);
-		shirtShade1.curveTo(381, 492, 384, 489, 390, 470);
-		shirtShade1.curveTo(389, 475, 382, 482, 377, 488);
-		shirtShade1.lineTo(378, 500);
+		GeneralPath shirtShade = new GeneralPath();
+		shirtShade.moveTo(335, 460);
+		shirtShade.quadTo(349, 447, 356, 437);
+		shirtShade.curveTo(366, 429, 367, 426, 372, 418);
+		shirtShade.curveTo(377, 425, 380, 409, 393, 416);
+		shirtShade.curveTo(394, 424, 395, 433, 394, 438);
+		shirtShade.curveTo(382, 436, 348, 461, 335, 460);
+		shirtShade.moveTo(378, 500);
+		shirtShade.curveTo(381, 492, 384, 489, 390, 470);
+		shirtShade.curveTo(389, 475, 382, 482, 377, 488);
+		shirtShade.lineTo(378, 500);
+		shirtShade.moveTo(199, 409);
+		shirtShade.curveTo(200, 430, 214, 457, 221, 461);
+		shirtShade.curveTo(223, 465, 228, 470, 231, 471);
+		shirtShade.curveTo(222, 444, 221, 465, 199, 409);
+		shirtShade.moveTo(225, 490);
+		shirtShade.curveTo(242, 501, 258, 524, 287, 520);
+		shirtShade.lineTo(285, 511);
+		shirtShade.curveTo(259, 508, 243, 492, 225, 490);
+		shirtShade.moveTo(157, 522);
+		shirtShade.curveTo(157, 533, 165, 539, 172, 542);
+		shirtShade.lineTo(185, 535);
+		shirtShade.curveTo(189, 542, 245, 559, 251, 554);
+		shirtShade.curveTo(255, 552, 267, 551, 271, 556);
+		shirtShade.curveTo(273, 555, 277, 557, 278, 558);
+		shirtShade.curveTo(281, 558, 286, 561, 314, 561);
+		shirtShade.curveTo(300, 553, 291, 544, 288, 539);
+		shirtShade.curveTo(287, 537, 279, 541, 275, 545);
+		shirtShade.curveTo(254, 551, 227, 537, 218, 528);
+		shirtShade.curveTo(213, 526, 192, 528, 176, 532);
+		shirtShade.curveTo(169, 531, 163, 521, 157, 522);
+		shirtShade.moveTo(320, 563);
+		shirtShade.curveTo(326, 560, 321, 557, 343, 557);
+		shirtShade.curveTo(356, 548, 375, 550, 374, 531);
+		shirtShade.curveTo(385, 547, 374, 551, 365, 560);
+		shirtShade.lineTo(345, 560);
+		shirtShade.curveTo(336, 564, 326, 568, 320, 563);
 		graphShirtShade1.setColor(gokuRed2);
 		graphShirtShade1.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		graphShirtShade1.fill(shirtShade1);
+		graphShirtShade1.fill(shirtShade);
+		
+		Graphics2D graphLogoBorder = (Graphics2D) g;
+		GeneralPath logoBorder = new GeneralPath();
+		logoBorder.moveTo(284, 510);
+		logoBorder.curveTo(286, 485, 309, 476, 326, 477);
+		logoBorder.curveTo(342, 478, 363, 488, 362, 518);
+		logoBorder.curveTo(360, 532, 348, 549, 317, 549);
+		logoBorder.curveTo(297, 544, 283, 535, 284, 510);
+		graphLogoBorder.setColor(gokuBlack1);
+		graphLogoBorder.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphLogoBorder.fill(logoBorder);
+		
+		Graphics2D graphLogoCircle = (Graphics2D) g;
+		GeneralPath logoCircle = new GeneralPath();
+		logoCircle.moveTo(290, 511);
+		logoCircle.curveTo(291, 500, 301, 484, 323, 483);
+		logoCircle.curveTo(333, 482, 356, 491, 356, 511);
+		logoCircle.curveTo(355, 532, 335, 547, 317, 543);
+		logoCircle.curveTo(300, 540, 287, 531, 290, 511);
+		graphLogoCircle.setColor(gokuYellow1);
+		graphLogoCircle.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphLogoCircle.fill(logoCircle);
+		
+		Graphics2D graphLogoShade = (Graphics2D) g;
+		GeneralPath logoShade = new GeneralPath();
+		logoShade.moveTo(290, 511);
+		logoShade.curveTo(289, 514, 298, 512, 303, 512);
+		logoShade.curveTo(302, 515, 297, 519, 290, 520);
+		logoShade.closePath();
+		graphLogoShade.setColor(gokuYellow2);
+		graphLogoShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphLogoShade.fill(logoShade);
+		
+		Graphics2D graphLogo = (Graphics2D) g;
+		GeneralPath logo = new GeneralPath();
+		logo.moveTo(324, 483);
+		logo.curveTo(321, 488, 317, 490, 307, 491);
+		logo.curveTo(314, 500, 303, 489, 306, 502);
+		logo.curveTo(306, 504, 305, 507, 303, 507);
+		logo.curveTo(303, 508, 309, 512, 317, 511);
+		logo.curveTo(319, 518, 304, 510, 299, 509);
+		logo.curveTo(301, 511, 301, 517, 295, 523);
+		logo.curveTo(297, 527, 303, 526, 310, 528);
+		logo.curveTo(310, 538, 313, 540, 335, 540);
+		graphLogo.setColor(gokuBlack1);
+		graphLogo.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphLogo.draw(logo);
 		
 		Graphics2D graphLeftArm = (Graphics2D) g;
 		GeneralPath leftArm = new GeneralPath();
@@ -270,6 +345,39 @@ public class Goku extends Frame {
 		graphRightArmShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphRightArmShade.fill(rightArmShade);
 		
+		Graphics2D graphRightHand = (Graphics2D) g;
+		GeneralPath rightHand = new GeneralPath();
+		rightHand.moveTo(74, 344);
+		rightHand.curveTo(65, 333, 41, 330, 39, 333);
+		rightHand.curveTo(32, 329, 19, 331, 12, 346);
+		rightHand.curveTo(1, 360, 0, 366, 7, 373);
+		rightHand.curveTo(14, 355, 24, 360, 24, 356);
+		rightHand.lineTo(29, 351);
+		rightHand.curveTo(35, 360, 29, 376, 25, 375);
+		rightHand.curveTo(14, 382, 13, 380, 22, 390);
+		rightHand.curveTo(36, 392, 37, 384, 51, 388);
+		rightHand.closePath();
+		graphRightHand.setColor(gokuSkin1);
+		graphRightHand.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightHand.fill(rightHand);
+		
+		Graphics2D graphRightHandShade = (Graphics2D) g;
+		GeneralPath rightHandShade = new GeneralPath();
+		rightHandShade.moveTo(51, 388);
+		rightHandShade.curveTo(37, 384, 36, 392, 22, 390);
+		rightHandShade.curveTo(17, 386, 15, 383, 16, 380);
+		rightHandShade.curveTo(11, 379, 9, 377, 7, 373);
+		rightHandShade.curveTo(14, 355, 24, 360, 24, 356);
+		rightHandShade.lineTo(29, 351);
+		rightHandShade.curveTo(35, 360, 29, 376, 25, 375);
+		rightHandShade.curveTo(4, 384, 14, 394, 18, 397);
+		rightHandShade.curveTo(26, 400, 34, 393, 36, 395);
+		rightHandShade.curveTo(37, 395, 41, 399, 53, 397);
+		rightHandShade.closePath();
+		graphRightHandShade.setColor(gokuSkin2);
+		graphRightHandShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightHandShade.fill(rightHandShade);
+		
 		Graphics2D graphRightWrist = (Graphics2D) g;
 		GeneralPath rightWrist = new GeneralPath();
 		rightWrist.moveTo(118, 355);
@@ -296,18 +404,20 @@ public class Goku extends Frame {
 		graphRightWristShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphRightWristShade.fill(rightWristShade);
 		
-		Graphics2D graphRightHand = (Graphics2D) g;
-		GeneralPath rightHand = new GeneralPath();
-		rightHand.moveTo(74, 344);
-		rightHand.curveTo(65, 333, 41, 330, 39, 333);
-		rightHand.curveTo(32, 329, 19, 331, 12, 346);
-		rightHand.curveTo(1, 360, 0, 366, 7, 373);
-		graphRightHand.setColor(gokuSkin1);
-		graphRightHand.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		graphRightHand.draw(rightHand);
-		
-		
-		
+		Graphics2D graphBelt = (Graphics2D) g;
+		GeneralPath belt = new GeneralPath();
+		belt.moveTo(170, 541);
+		belt.curveTo(172, 544, 178, 539, 185, 535);
+		belt.curveTo(189, 542, 245, 559, 251, 554);
+		belt.curveTo(255, 552, 267, 551, 271, 556);
+		belt.curveTo(273, 555, 277, 557, 278, 558);
+		belt.curveTo(281, 558, 286, 561, 314, 561);
+		belt.curveTo(322, 568, 327, 569, 335, 567);
+		belt.curveTo(338, 568, 340, 571, 340, 574);
+		belt.curveTo(332, 575, 313, 576, 297, 574);
+		graphBelt.setColor(gokuBlack2);
+		graphBelt.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphBelt.fill(belt);
 		
 		
 		
@@ -322,7 +432,7 @@ public class Goku extends Frame {
 		faceOutline.curveTo(358, 438, 353, 446, 302, 449);
 		faceOutline.curveTo(291, 451, 278, 447, 273, 445);
 		faceOutline.curveTo(229, 419, 214, 415, 215, 375);
-		graphFaceOutline.setColor(gokuBlack);
+		graphFaceOutline.setColor(gokuBlack1);
 		graphFaceOutline.setStroke(outLine);
 		graphFaceOutline.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphFaceOutline.draw(faceOutline);
@@ -339,7 +449,7 @@ public class Goku extends Frame {
 		shirtOutline.curveTo(177, 411, 162, 450, 172, 466);
 		shirtOutline.moveTo(181, 439);
 		shirtOutline.curveTo(167, 477, 174, 478, 168, 497);
-		graphShirtOutline.setColor(gokuBlack);
+		graphShirtOutline.setColor(gokuBlack1);
 		graphShirtOutline.setStroke(hairLine);
 		graphShirtOutline.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphShirtOutline.draw(shirtOutline);
