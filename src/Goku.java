@@ -5,16 +5,30 @@
 */
 
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.geom.*;
         
 public class Goku extends Frame {
     
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1143862912602067547L;
+	private static final long serialVersionUID = -5104858925667968715L;
 
+	class CloseHandler extends WindowAdapter {
+		public void windowClosing(WindowEvent we) {	
+			System.exit(0); 
+		}
+	}
+	
+	public Goku() {
+		addWindowListener(new CloseHandler());
+		setTitle("Goku - Ryan Arioja, 4CSC");
+        setBackground(Color.white);
+        setForeground(Color.black);
+        setResizable(false);
+	}
+	
 	public void paint(Graphics g) {
+		
         BasicStroke sketchLine = new BasicStroke(1.0f);
         BasicStroke hairLine = new BasicStroke(1.25f);
         BasicStroke outLine = new BasicStroke(1.75f);
@@ -256,6 +270,43 @@ public class Goku extends Frame {
 		graphRightArmShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphRightArmShade.fill(rightArmShade);
 		
+		Graphics2D graphRightWrist = (Graphics2D) g;
+		GeneralPath rightWrist = new GeneralPath();
+		rightWrist.moveTo(118, 355);
+		rightWrist.curveTo(107, 347, 87, 391, 88, 401);
+		rightWrist.curveTo(79, 406, 71, 392, 59, 392);
+		rightWrist.lineTo(51, 388);
+		rightWrist.curveTo(46, 367, 79, 334, 84, 345);
+		rightWrist.curveTo(93, 345, 99, 346, 104, 349);
+		rightWrist.curveTo(113, 347, 118, 348, 118, 355);
+		graphRightWrist.setColor(gokuBlue1);
+		graphRightWrist.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightWrist.fill(rightWrist);
+		
+		Graphics2D graphRightWristShade = (Graphics2D) g;
+		GeneralPath rightWristShade = new GeneralPath();
+		rightWristShade.moveTo(88, 401);
+		rightWristShade.curveTo(79, 405, 71, 391, 59, 391);
+		rightWristShade.lineTo(51, 388);
+		rightWristShade.curveTo(50, 397, 55, 403, 62, 404);
+		rightWristShade.curveTo(66, 407, 72, 410, 77, 412);
+		rightWristShade.curveTo(79, 416, 89, 419, 90, 415);
+		rightWristShade.quadTo(88, 413, 87, 401);
+		graphRightWristShade.setColor(gokuBlue2);
+		graphRightWristShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightWristShade.fill(rightWristShade);
+		
+		Graphics2D graphRightHand = (Graphics2D) g;
+		GeneralPath rightHand = new GeneralPath();
+		rightHand.moveTo(74, 344);
+		rightHand.curveTo(65, 333, 41, 330, 39, 333);
+		rightHand.curveTo(32, 329, 19, 331, 12, 346);
+		rightHand.curveTo(1, 360, 0, 366, 7, 373);
+		graphRightHand.setColor(gokuSkin1);
+		graphRightHand.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphRightHand.draw(rightHand);
+		
+		
 		
 		
 		
@@ -296,10 +347,7 @@ public class Goku extends Frame {
     
     public static void main (String[] args) {
         Goku goku = new Goku();
-        goku.setTitle("Goku - Ryan Arioja, 4CSC");
-        goku.setBackground(Color.white);
-        goku.setSize(590, 820);
+        goku.setSize(579, 820);
         goku.setVisible(true);
-        goku.setForeground(Color.black);
     }
 }
