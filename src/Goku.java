@@ -25,6 +25,17 @@ public class Goku extends Frame {
         setBackground(Color.white);
         setForeground(Color.black);
         setResizable(false);
+
+//        ScrollPane pane = new ScrollPane(ScrollPane.VERTICAL_SCROLLBAR_ALWAYS, ScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+//
+//        setContentPane(pane);
+//
+//        SwingUtilities.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                frame.setVisible(true);
+//            }
+//        });
 	}
 	
 	public void paint(Graphics g) {
@@ -230,9 +241,59 @@ public class Goku extends Frame {
 		logo.curveTo(301, 511, 301, 517, 295, 523);
 		logo.curveTo(297, 527, 303, 526, 310, 528);
 		logo.curveTo(310, 538, 313, 540, 335, 540);
+		logo.curveTo(344, 532, 328, 536, 341, 531);
+		logo.curveTo(341, 521, 346, 519, 340, 516);
+		logo.curveTo(343, 504, 346, 502, 341, 499);
+		logo.curveTo(336, 501, 330, 499, 328, 498);
+		logo.curveTo(334, 494, 352, 489, 326, 487);
+		logo.curveTo(325, 487, 325, 484, 324, 483);
 		graphLogo.setColor(gokuBlack1);
 		graphLogo.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		graphLogo.draw(logo);
+		graphLogo.fill(logo);
+		
+		Graphics2D graphLogoHoles = (Graphics2D) g;
+		GeneralPath logoHoles = new GeneralPath();
+		logoHoles.moveTo(325, 489);
+		logoHoles.quadTo(321, 493, 316, 495);
+		logoHoles.lineTo(323, 497);
+		logoHoles.lineTo(331, 491);
+		logoHoles.closePath();
+		logoHoles.moveTo(319, 502);
+		logoHoles.quadTo(319, 498, 313, 499);
+		logoHoles.curveTo(310, 501, 316, 504, 319, 502);
+		logoHoles.moveTo(312, 504);
+		logoHoles.quadTo(310, 506, 310, 507);
+		logoHoles.curveTo(312, 508, 319, 510, 318, 506);
+		logoHoles.moveTo(314, 515);
+		logoHoles.curveTo(309, 516, 306, 512, 305, 515);
+		logoHoles.curveTo(307, 519, 316, 519, 314, 515);
+		logoHoles.moveTo(305, 520);
+		logoHoles.curveTo(301, 523, 307, 524, 310, 525);
+		logoHoles.curveTo(310, 523, 314, 520, 305, 520);
+		logoHoles.moveTo(326, 500);
+		logoHoles.quadTo(327, 503, 325, 503);
+		logoHoles.quadTo(337, 502, 337, 504);
+		logoHoles.curveTo(342, 502, 331, 501, 326, 500);
+		logoHoles.moveTo(323, 508);
+		logoHoles.curveTo(324, 505, 337, 507, 336, 510);
+		logoHoles.curveTo(336, 508, 324, 509, 323, 508);
+		logoHoles.moveTo(322, 513);
+		logoHoles.quadTo(322, 510, 333, 513);
+		logoHoles.lineTo(332, 515);
+		logoHoles.curveTo(332, 513, 330, 514, 322, 513);
+		logoHoles.closePath();
+		logoHoles.moveTo(338, 520);
+		logoHoles.curveTo(338, 516, 317, 516, 320, 518);
+		logoHoles.curveTo(331, 516, 332, 513, 320, 518);
+		logoHoles.moveTo(334, 526);
+		logoHoles.curveTo(332, 526, 328, 523, 319, 522);
+		logoHoles.curveTo(314, 527, 323, 523, 334, 526);
+		logoHoles.moveTo(317, 529);
+		logoHoles.curveTo(315, 536, 328, 535, 333, 535);
+		logoHoles.curveTo(334, 529, 321, 530, 317, 529);
+		graphLogoHoles.setColor(gokuYellow1);
+		graphLogoHoles.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphLogoHoles.fill(logoHoles);
 		
 		Graphics2D graphLeftArm = (Graphics2D) g;
 		GeneralPath leftArm = new GeneralPath();
@@ -415,9 +476,61 @@ public class Goku extends Frame {
 		belt.curveTo(322, 568, 327, 569, 335, 567);
 		belt.curveTo(338, 568, 340, 571, 340, 574);
 		belt.curveTo(332, 575, 313, 576, 297, 574);
+		belt.curveTo(308, 590, 372, 588, 390, 594);
+		belt.curveTo(372, 605, 366, 622, 360, 642);
+		belt.curveTo(300, 634, 271, 600, 266, 579);
+		belt.curveTo(257, 580, 248, 578, 244, 575);
+		belt.curveTo(206, 635, 256, 660, 260, 690);
+		belt.curveTo(239, 691, 230, 691, 218, 701);
+		belt.curveTo(191, 688, 193, 589, 221, 568);
+		belt.curveTo(196, 565, 179, 556, 170, 541);
 		graphBelt.setColor(gokuBlack2);
 		graphBelt.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		graphBelt.fill(belt);
+		
+		Graphics2D graphBeltShade = (Graphics2D) g;
+		GeneralPath beltShade = new GeneralPath();
+		beltShade.moveTo(170, 541);
+		beltShade.curveTo(172, 544, 178, 539, 185, 535);
+		beltShade.quadTo(186, 538, 192, 540);
+		beltShade.lineTo(172, 544);
+		beltShade.closePath();
+		beltShade.moveTo(315, 562);
+		beltShade.curveTo(331, 571, 339, 561, 343, 558);
+		beltShade.lineTo(363, 558);
+		beltShade.curveTo(364, 568, 352, 573, 340, 574);
+		beltShade.curveTo(336, 565, 335, 569, 324, 568);
+		beltShade.lineTo(315, 562);
+		beltShade.moveTo(318, 574);
+		beltShade.curveTo(304, 565, 291, 569, 286, 561);
+		beltShade.lineTo(278, 558);
+		beltShade.curveTo(260, 587, 264, 566, 253, 573);
+		beltShade.curveTo(248, 574, 246, 570, 249, 563);
+		beltShade.curveTo(227, 564, 206, 617, 231, 633);
+		beltShade.curveTo(224, 617, 235, 581, 244, 575);
+		beltShade.curveTo(248, 578, 257, 580, 266, 579);
+		beltShade.lineTo(269, 587);
+		beltShade.curveTo(277, 570, 288, 602, 317, 610);
+		beltShade.curveTo(326, 610, 315, 596, 302, 589);
+		beltShade.lineTo(283, 572);
+		beltShade.lineTo(283, 566);
+		beltShade.lineTo(297, 574);
+		beltShade.closePath();
+		beltShade.moveTo(251, 554);
+		beltShade.quadTo(248, 555, 249, 559);
+		beltShade.curveTo(245, 557, 232, 561, 226, 566);
+		beltShade.curveTo(194, 558, 226, 557, 237, 560);
+		beltShade.curveTo(243, 559, 245, 556, 246, 555);
+		beltShade.closePath();
+		graphBeltShade.setColor(gokuBlack1);
+		graphBeltShade.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		graphBeltShade.fill(beltShade);
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -457,7 +570,7 @@ public class Goku extends Frame {
     
     public static void main (String[] args) {
         Goku goku = new Goku();
-        goku.setSize(579, 820);
+        goku.setSize(579, 826);
         goku.setVisible(true);
     }
 }
