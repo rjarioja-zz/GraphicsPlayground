@@ -157,7 +157,7 @@ public class Portrait extends Frame {
 		bg1.lineTo(0, 25);
 		bg1.closePath();
 		
-		GradientPaint gradient1 = new GradientPaint(252, 666, new Color(62, 127, 187), 0, 666, Color.white);
+		GradientPaint gradient1 = new GradientPaint(252, 666, new Color(194, 155, 71), 0, 666, Color.white);
 		graph.setPaint(gradient1);
 		graph.fill(bg1);
 		
@@ -255,15 +255,97 @@ public class Portrait extends Frame {
 		graph.setStroke(sketchLine);
 		graph.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
+		GeneralPath skinShade15 = new GeneralPath();
+		skinShade15.moveTo(172, 146);
+		skinShade15.curveTo(202, 179, 305, 222, 367, 230);
+		skinShade15.curveTo(406, 101, 186, 36, 172, 146);
+		graph.setColor(new Color(253, 107, 21));
+		graph.fill(skinShade15);
+		
 		GeneralPath skinShade1 = new GeneralPath();
-		skinShade1.moveTo(243, 232);
+		skinShade1.moveTo(240, 220);
 		skinShade1.curveTo(242, 234, 233, 240, 236, 250);
-		skinShade1.curveTo(247, 261, 247, 277, 259, 294);
+		skinShade1.curveTo(247, 261, 247, 277, 258, 295);
 		skinShade1.curveTo(261, 290, 271, 283, 275, 283);
 		skinShade1.curveTo(262, 251, 244, 249, 280, 239);
-		skinShade1.curveTo(292, 236, 254, 221, 243, 232);
+		skinShade1.curveTo(292, 236, 254, 221, 243, 222);
 		graph.setColor(new Color(253, 230, 90));
 		graph.fill(skinShade1);
+		
+		GeneralPath skinShade13 = new GeneralPath();
+		skinShade13.moveTo(303, 278);
+		skinShade13.curveTo(283, 279, 272, 279, 258, 295);
+		skinShade13.curveTo(250, 307, 249, 313, 251, 329);
+		skinShade13.lineTo(256, 338);
+		skinShade13.lineTo(296, 320);
+		skinShade13.curveTo(295, 317, 307, 287, 303, 278);
+		graph.setColor(new Color(254, 189, 33));
+		graph.fill(skinShade13);
+		
+		GeneralPath skinShade14 = new GeneralPath();
+		skinShade14.moveTo(248, 158);
+		skinShade14.lineTo(257, 150);
+		skinShade14.curveTo(242, 147, 241, 146, 242, 133);
+		skinShade14.curveTo(211, 128, 235, 126, 225, 122);
+		skinShade14.curveTo(223, 127, 212, 128, 214, 136);
+		skinShade14.curveTo(176, 136, 190, 162, 207, 179);
+		skinShade14.closePath();
+		graph.setColor(new Color(250, 141, 14));
+		graph.fill(skinShade14);
+		
+		GeneralPath skinShade11 = new GeneralPath();
+		skinShade11.moveTo(236, 168);
+		skinShade11.curveTo(227, 162, 226, 152, 216, 148);
+		skinShade11.curveTo(229, 163, 240, 158, 248, 158);
+		skinShade11.curveTo(252, 165, 251, 176, 243, 177);
+		skinShade11.curveTo(227, 185, 209, 182, 221, 165);
+		skinShade11.closePath();
+		graph.setColor(new Color(253, 163, 67));
+		graph.fill(skinShade11);
+		
+		GeneralPath skinShade12 = new GeneralPath();
+		skinShade12.moveTo(372, 225);
+		skinShade12.curveTo(323, 251, 336, 215, 323, 220);
+		skinShade12.curveTo(305, 218, 281, 213, 273, 215);
+		skinShade12.curveTo(221, 230, 240, 199, 227, 200);
+		skinShade12.curveTo(256, 236, 250, 261, 275, 283);
+		skinShade12.curveTo(297, 287, 327, 266, 357, 238);
+		skinShade12.closePath();
+		graph.setColor(new Color(255, 196, 58));
+		graph.fill(skinShade12);
+		
+		GeneralPath skinShade10 = new GeneralPath();
+		skinShade10.moveTo(236, 170);
+		skinShade10.curveTo(228, 154, 219, 142, 196, 148);
+		skinShade10.curveTo(190, 163, 216, 170, 236, 170);
+		graph.setColor(new Color(252, 206, 120));
+		graph.fill(skinShade10);
+		
+		GeneralPath skinShade6 = new GeneralPath();
+		skinShade6.moveTo(227, 200);
+		skinShade6.curveTo(214, 184, 309, 219, 242, 176);
+		skinShade6.curveTo(212, 178, 200, 175, 190, 163);
+		skinShade6.curveTo(167, 190, 217, 214, 260, 220);
+		skinShade6.lineTo(260, 200);
+		skinShade6.closePath();
+		graph.setColor(new Color(255, 209, 74));
+		graph.fill(skinShade6);
+		
+		GeneralPath skinShade7 = new GeneralPath();
+		skinShade7.moveTo(241, 222);
+		skinShade7.curveTo(244, 234, 235, 239, 236, 248);
+		skinShade7.curveTo(210, 231, 235, 230, 236, 226);
+		skinShade7.curveTo(240, 225, 233, 222, 238, 219);
+		skinShade7.closePath();
+		graph.setColor(new Color(231, 72, 17));
+		graph.fill(skinShade7);
+		
+		GeneralPath skinShade8 = new GeneralPath();
+		skinShade8.moveTo(241, 226);
+		skinShade8.curveTo(239, 233, 235, 236, 234, 242);
+		skinShade8.curveTo(221, 233, 242, 226, 241, 226);
+		graph.setColor(new Color(140, 9, 0));
+		graph.fill(skinShade8);
 		
 		GeneralPath skinShade5 = new GeneralPath();
 		skinShade5.moveTo(191, 163);
@@ -280,6 +362,15 @@ public class Portrait extends Frame {
 		skinShade5.curveTo(221, 163, 198, 160, 191, 163);
 		graph.setColor(new Color(254, 149, 31));
 		graph.fill(skinShade5);
+		
+		GeneralPath skinShade9 = new GeneralPath();
+		skinShade9.moveTo(236, 170);
+		skinShade9.curveTo(222, 179, 222, 161, 204, 173);
+		skinShade9.curveTo(194, 171, 187, 167, 200, 164);
+		skinShade9.curveTo(242, 161, 218, 171, 234, 169);
+		skinShade9.closePath();
+		graph.setColor(new Color(107, 31, 7));
+		graph.fill(skinShade9);
 		
 		GeneralPath skinShade2 = new GeneralPath();
 		skinShade2.moveTo(201, 198);
@@ -327,8 +418,6 @@ public class Portrait extends Frame {
 		drawHair(g);
     }
 	
-	
-    
     public static void main (String[] args) {
         Portrait portrait = new Portrait();
         portrait.setSize(645, 666); //641 + 4, 641 + 25
