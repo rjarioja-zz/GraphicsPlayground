@@ -38,6 +38,78 @@ public class Portrait extends Frame {
         setResizable(false);
 	}
 	
+	public Graphics2D drawBackground(Graphics g) {
+		Graphics2D graph = (Graphics2D) g;
+		graph.setStroke(sketchLine);
+		graph.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		
+		GeneralPath bg1 = new GeneralPath();
+		GeneralPath bg2 = new GeneralPath();
+		
+		bg1.moveTo(133, 25);
+		bg1.curveTo(143, 35, 124, 28, 120, 41);
+		bg1.curveTo(122, 45, 117, 51, 110, 47);
+		bg1.curveTo(106, 57, 119, 62, 114, 72);
+		bg1.curveTo(107, 73, 104, 65, 97, 65);
+		bg1.curveTo(109, 78, 113, 72, 118, 77);
+		bg1.curveTo(121, 85, 108, 89, 130, 93);
+		bg1.curveTo(137, 102, 127, 104, 135, 108);
+		bg1.curveTo(148, 138, 125, 106, 127, 144);
+		bg1.curveTo(162, 170, 146, 145, 158, 166);
+		bg1.curveTo(171, 175, 173, 156, 186, 184);
+		bg1.curveTo(189, 205, 205, 210, 205, 237);
+		bg1.curveTo(204, 260, 176, 305, 194, 321);
+		bg1.curveTo(210, 343, 239, 314, 226, 342);
+		bg1.curveTo(207, 348, 225, 378, 243, 367);
+		bg1.curveTo(241, 387, 254, 380, 242, 399);
+		bg1.curveTo(241, 423, 256, 426, 268, 416);
+		bg1.curveTo(284, 427, 257, 421, 281, 454);
+		bg1.curveTo(298, 469, 323, 472, 376, 456);
+		bg1.curveTo(383, 477, 412, 489, 408, 500);
+		bg1.curveTo(400, 508, 412, 507, 398, 525);
+		bg1.curveTo(394, 552, 374, 559, 370, 619);
+		bg1.curveTo(358, 645, 362, 648, 365, 665);
+		bg1.lineTo(0, 665);
+		bg1.lineTo(0, 25);
+		bg1.closePath();
+		
+		GradientPaint gradient1 = new GradientPaint(252, 666, new Color(76, 126, 42), 0, 666, Color.white);
+		graph.setPaint(gradient1);
+		graph.fill(bg1);
+		
+		bg2.moveTo(133, 25);
+		bg2.curveTo(143, 35, 124, 28, 120, 41);
+		bg2.curveTo(122, 45, 117, 51, 110, 47);
+		bg2.curveTo(106, 57, 119, 62, 114, 72);
+		bg2.curveTo(107, 73, 104, 65, 97, 65);
+		bg2.curveTo(109, 78, 113, 72, 118, 77);
+		bg2.curveTo(121, 85, 108, 89, 130, 93);
+		bg2.curveTo(137, 102, 127, 104, 135, 108);
+		bg2.curveTo(148, 138, 125, 106, 127, 144);
+		bg2.curveTo(162, 170, 146, 145, 158, 166);
+		bg2.curveTo(171, 175, 173, 156, 186, 184);
+		bg2.curveTo(189, 205, 205, 210, 205, 237);
+		bg2.curveTo(204, 260, 176, 305, 194, 321);
+		bg2.curveTo(210, 343, 239, 314, 226, 342);
+		bg2.curveTo(207, 348, 225, 378, 243, 367);
+		bg2.curveTo(241, 387, 254, 380, 242, 399);
+		bg2.curveTo(241, 423, 256, 426, 268, 416);
+		bg2.curveTo(284, 427, 257, 421, 281, 454);
+		bg2.curveTo(298, 469, 323, 472, 376, 456);
+		bg2.curveTo(383, 477, 412, 489, 408, 500);
+		bg2.curveTo(400, 508, 412, 507, 398, 525);
+		bg2.curveTo(394, 552, 374, 559, 370, 619);
+		bg2.curveTo(358, 645, 362, 648, 365, 665);
+		bg2.lineTo(0, 665);
+		bg2.lineTo(0, 25);
+		bg2.closePath();
+		
+		GradientPaint gradient2 = new GradientPaint(86, 666, new Color(80, 193, 68), 0, 666, Color.white);
+		graph.setPaint(gradient2);
+		//graph.fill(bg2);
+		
+		return graph;
+	}
 	public Graphics2D drawHair(Graphics g) {
 		Graphics2D graph = (Graphics2D) g;
 		graph.setColor(hairBlack);
@@ -120,78 +192,6 @@ public class Portrait extends Frame {
 		hairShade.closePath();
 		
 		graph.fill(hairShade);
-		return graph;
-	}
-	public Graphics2D drawBackground(Graphics g) {
-		Graphics2D graph = (Graphics2D) g;
-		graph.setStroke(sketchLine);
-		graph.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		
-		GeneralPath bg1 = new GeneralPath();
-		GeneralPath bg2 = new GeneralPath();
-		
-		bg1.moveTo(133, 25);
-		bg1.curveTo(143, 35, 124, 28, 120, 41);
-		bg1.curveTo(122, 45, 117, 51, 110, 47);
-		bg1.curveTo(106, 57, 119, 62, 114, 72);
-		bg1.curveTo(107, 73, 104, 65, 97, 65);
-		bg1.curveTo(109, 78, 113, 72, 118, 77);
-		bg1.curveTo(121, 85, 108, 89, 130, 93);
-		bg1.curveTo(137, 102, 127, 104, 135, 108);
-		bg1.curveTo(148, 138, 125, 106, 127, 144);
-		bg1.curveTo(162, 170, 146, 145, 158, 166);
-		bg1.curveTo(171, 175, 173, 156, 186, 184);
-		bg1.curveTo(189, 205, 205, 210, 205, 237);
-		bg1.curveTo(204, 260, 176, 305, 194, 321);
-		bg1.curveTo(210, 343, 239, 314, 226, 342);
-		bg1.curveTo(207, 348, 225, 378, 243, 367);
-		bg1.curveTo(241, 387, 254, 380, 242, 399);
-		bg1.curveTo(241, 423, 256, 426, 268, 416);
-		bg1.curveTo(284, 427, 257, 421, 281, 454);
-		bg1.curveTo(298, 469, 323, 472, 376, 456);
-		bg1.curveTo(383, 477, 412, 489, 408, 500);
-		bg1.curveTo(400, 508, 412, 507, 398, 525);
-		bg1.curveTo(394, 552, 374, 559, 370, 619);
-		bg1.curveTo(358, 645, 362, 648, 365, 665);
-		bg1.lineTo(0, 665);
-		bg1.lineTo(0, 25);
-		bg1.closePath();
-		
-		GradientPaint gradient1 = new GradientPaint(252, 666, new Color(76, 126, 42), 0, 666, Color.white);
-		graph.setPaint(gradient1);
-		graph.fill(bg1);
-		
-		bg2.moveTo(133, 25);
-		bg2.curveTo(143, 35, 124, 28, 120, 41);
-		bg2.curveTo(122, 45, 117, 51, 110, 47);
-		bg2.curveTo(106, 57, 119, 62, 114, 72);
-		bg2.curveTo(107, 73, 104, 65, 97, 65);
-		bg2.curveTo(109, 78, 113, 72, 118, 77);
-		bg2.curveTo(121, 85, 108, 89, 130, 93);
-		bg2.curveTo(137, 102, 127, 104, 135, 108);
-		bg2.curveTo(148, 138, 125, 106, 127, 144);
-		bg2.curveTo(162, 170, 146, 145, 158, 166);
-		bg2.curveTo(171, 175, 173, 156, 186, 184);
-		bg2.curveTo(189, 205, 205, 210, 205, 237);
-		bg2.curveTo(204, 260, 176, 305, 194, 321);
-		bg2.curveTo(210, 343, 239, 314, 226, 342);
-		bg2.curveTo(207, 348, 225, 378, 243, 367);
-		bg2.curveTo(241, 387, 254, 380, 242, 399);
-		bg2.curveTo(241, 423, 256, 426, 268, 416);
-		bg2.curveTo(284, 427, 257, 421, 281, 454);
-		bg2.curveTo(298, 469, 323, 472, 376, 456);
-		bg2.curveTo(383, 477, 412, 489, 408, 500);
-		bg2.curveTo(400, 508, 412, 507, 398, 525);
-		bg2.curveTo(394, 552, 374, 559, 370, 619);
-		bg2.curveTo(358, 645, 362, 648, 365, 665);
-		bg2.lineTo(0, 665);
-		bg2.lineTo(0, 25);
-		bg2.closePath();
-		
-		GradientPaint gradient2 = new GradientPaint(86, 666, new Color(80, 193, 68), 0, 666, Color.white);
-		graph.setPaint(gradient2);
-		//graph.fill(bg2);
-		
 		return graph;
 	}
 	public Graphics2D drawNose(Graphics g) {
@@ -440,11 +440,35 @@ public class Portrait extends Frame {
 		graph.setColor(new Color(248, 154, 40));
 		graph.fill(skinShade2);
 		
+		GeneralPath skinShade10 = new GeneralPath();
+		skinShade10.moveTo(267, 415);
+		skinShade10.curveTo(271, 417, 275, 422, 274, 422);
+		skinShade10.curveTo(274, 417, 278, 390, 267, 415);
+		graph.setColor(new Color(248, 43, 0));
+		graph.fill(skinShade10);
+		
+		GeneralPath skinShade11 = new GeneralPath();
+		skinShade11.moveTo(274, 406);
+		skinShade11.curveTo(275, 418, 275, 422, 271, 422);
+		skinShade11.curveTo(272, 444, 287, 436, 283, 454);
+		skinShade11.curveTo(302, 473, 351, 468, 361, 451);
+		graph.setColor(new Color(254, 174, 25));
+		graph.fill(skinShade11);
+		
+		GeneralPath skinShade13 = new GeneralPath();
+		skinShade13.moveTo(274, 434);
+		skinShade13.curveTo(276, 440, 280, 437, 281, 442);
+		skinShade13.curveTo(291, 444, 290, 436, 287, 426);
+		skinShade13.curveTo(287, 430, 279, 429, 274, 434);
+		graph.setColor(new Color(254, 215, 26));
+		graph.fill(skinShade13);
+		
 		GeneralPath skinShade1 = new GeneralPath();
 		skinShade1.moveTo(254, 341);
 		skinShade1.curveTo(259, 355, 271, 380, 261, 388);
-		skinShade1.curveTo(263, 408, 256, 420, 266, 418);
-		skinShade1.lineTo(275, 406);
+		skinShade1.curveTo(262, 416, 244, 398, 243, 406);
+		skinShade1.curveTo(243, 418, 255, 425, 266, 418);
+		skinShade1.lineTo(274, 406);
 		skinShade1.lineTo(288, 435);
 		skinShade1.curveTo(339, 356, 358, 400, 367, 401);
 		skinShade1.curveTo(432, 421, 434, 377, 445, 391);
@@ -453,6 +477,65 @@ public class Portrait extends Frame {
 		graph.setColor(new Color(252, 146, 8));
 		graph.fill(skinShade1);
 		
+		GeneralPath skinShade16 = new GeneralPath();
+		skinShade16.moveTo(376, 456);
+		skinShade16.curveTo(381, 470, 403, 485, 405, 488);
+		skinShade16.curveTo(415, 496, 411, 502, 415, 505);
+		skinShade16.curveTo(411, 493, 424, 479, 450, 462);
+		skinShade16.curveTo(455, 452, 449, 471, 448, 429);
+		skinShade16.closePath();
+		graph.setColor(new Color(255, 135, 4));
+		graph.fill(skinShade16);
+		
+		GeneralPath skinShade12 = new GeneralPath();
+		skinShade12.moveTo(288, 435);
+		skinShade12.curveTo(339, 356, 358, 400, 367, 401);
+		skinShade12.curveTo(432, 421, 434, 377, 445, 391);
+		skinShade12.curveTo(449, 403, 445, 415, 450, 418);
+		skinShade12.curveTo(455, 421, 441, 424, 449, 429);
+		skinShade12.lineTo(401, 479);
+		skinShade12.curveTo(404, 475, 381, 472, 380, 454);
+		skinShade12.curveTo(366, 452, 315, 475, 291, 460);
+		skinShade12.closePath();
+		graph.setColor(new Color(254, 106, 0));
+		graph.fill(skinShade12);
+		
+		GeneralPath skinShade14 = new GeneralPath();
+		skinShade14.moveTo(299, 459);
+		skinShade14.curveTo(311, 457, 315, 456, 317, 456);
+		skinShade14.curveTo(343, 435, 347, 409, 372, 453);
+		skinShade14.curveTo(341, 464, 299, 464, 299, 459);
+		skinShade14.moveTo(389, 441);
+		skinShade14.curveTo(428, 396, 416, 430, 413, 451);
+		skinShade14.curveTo(407, 456, 385, 462, 382, 457);
+		skinShade14.closePath();
+		graph.setColor(new Color(245, 71, 2));
+		graph.fill(skinShade14);
+		
+		GeneralPath skinShade15 = new GeneralPath();
+		skinShade15.moveTo(376, 456);
+		skinShade15.curveTo(378, 454, 380, 458, 386, 456);
+		skinShade15.curveTo(398, 458, 390, 448, 398, 441);
+		skinShade15.lineTo(389, 441);
+		skinShade15.curveTo(385, 448, 379, 453, 374, 456);
+		skinShade15.closePath();
+		graph.setColor(new Color(139, 49, 0));
+		graph.fill(skinShade15);
+		
+		GeneralPath skinShade8 = new GeneralPath();
+		skinShade8.moveTo(261, 389);
+		skinShade8.curveTo(246, 411, 252, 418, 261, 415);
+		skinShade8.curveTo(261, 412, 264, 400, 261, 389);
+		graph.setColor(new Color(248, 56, 7));
+		graph.fill(skinShade8);
+		
+		GeneralPath skinShade9 = new GeneralPath();
+		skinShade9.moveTo(252, 407);
+		skinShade9.curveTo(266, 406, 261, 419, 257, 418);
+		skinShade9.curveTo(256, 422, 239, 415, 252, 407);
+		graph.setColor(new Color(249, 34, 3));
+		graph.fill(skinShade9);
+		
 		GeneralPath skinShade5 = new GeneralPath();
 		skinShade5.moveTo(256, 388);
 		skinShade5.curveTo(259, 382, 259, 379, 258, 377);
@@ -460,6 +543,40 @@ public class Portrait extends Frame {
 		skinShade5.curveTo(260, 387, 258, 386, 256, 387);
 		graph.setColor(new Color(255, 124, 101));
 		graph.fill(skinShade5);
+		
+		GeneralPath skinShade6 = new GeneralPath();
+		skinShade6.moveTo(256, 388);
+		skinShade6.curveTo(259, 385, 263, 383, 263, 381);
+		skinShade6.curveTo(268, 384, 266, 366, 245, 365);
+		skinShade6.curveTo(240, 364, 238, 363, 234, 361);
+		skinShade6.curveTo(235, 365, 244, 365, 246, 366);
+		skinShade6.curveTo(249, 375, 257, 365, 263, 380);
+		skinShade6.curveTo(261, 380, 255, 387, 256, 388);
+		graph.setColor(new Color(70, 2, 1));
+		graph.fill(skinShade6);
+		
+		GeneralPath skinShade7 = new GeneralPath();
+		skinShade7.moveTo(259, 384);
+		skinShade7.curveTo(258, 381, 262, 378, 264, 382);
+		skinShade7.curveTo(263, 383, 262, 385, 259, 384);
+		graph.setColor(new Color(215, 88, 45));
+		graph.fill(skinShade7);
+		
+		GeneralPath skinShade17 = new GeneralPath();
+		skinShade17.moveTo(380, 451);
+		skinShade17.curveTo(382, 451, 385, 447, 387, 445);
+		skinShade17.curveTo(387, 449, 397, 446, 385, 454);
+		skinShade17.curveTo(386, 450, 379, 455, 380, 451);
+		graph.setColor(new Color(76, 11, 0));
+		graph.fill(skinShade17);
+		
+		GeneralPath skinShade18 = new GeneralPath();
+		skinShade18.moveTo(248, 364);
+		skinShade18.curveTo(247, 362, 239, 361, 238, 364);
+		skinShade18.curveTo(239, 368, 244, 363, 246, 367);
+		skinShade18.closePath();
+		graph.setColor(new Color(252, 83, 18));
+		graph.fill(skinShade18);
 		
 		return graph;
 	}
