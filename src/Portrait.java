@@ -580,12 +580,45 @@ public class Portrait extends Frame {
 		
 		return graph;
 	}
-	public void paint(Graphics g) {
+	public Graphics2D drawEar(Graphics g) {
+		Graphics2D graph = (Graphics2D) g;
+		graph.setStroke(sketchLine);
+		graph.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		drawMouth(g);
+		GeneralPath skinShade1 = new GeneralPath();
+		skinShade1.moveTo(360, 235);
+		skinShade1.lineTo(303, 278);
+		skinShade1.lineTo(287, 322);
+		skinShade1.curveTo(318, 420, 389, 444, 410, 494);
+		skinShade1.curveTo(409, 503, 435, 530, 437, 531);
+		skinShade1.curveTo(436, 523, 456, 519, 461, 517);
+		skinShade1.curveTo(473, 507, 460, 509, 518, 460);
+		skinShade1.curveTo(519, 449, 498, 474, 487, 481);
+		skinShade1.lineTo(466, 461);
+		skinShade1.curveTo(467, 434, 451, 420, 469, 357);
+		skinShade1.curveTo(476, 347, 463, 329, 497, 310);
+		skinShade1.curveTo(513, 304, 524, 334, 540, 328);
+		skinShade1.curveTo(540, 315, 529, 331, 516, 273);
+		skinShade1.curveTo(500, 290, 491, 313, 472, 309);
+		skinShade1.curveTo(468, 303, 460, 297, 475, 287);
+		skinShade1.curveTo(463, 288, 460, 284, 453, 286);
+		skinShade1.curveTo(440, 280, 464, 267, 439, 263);
+		skinShade1.curveTo(431, 256, 440, 245, 434, 233);
+		skinShade1.curveTo(410, 238, 403, 226, 389, 230);
+		skinShade1.curveTo(379, 231, 380, 247, 364, 237);
+		skinShade1.closePath();
+		graph.setColor(new Color(253, 176, 8));
+		graph.fill(skinShade1);
+		
+		return graph;
+	}
+	
+	public void paint(Graphics g) {
+
 		drawNose(g);
 		drawEye(g);
-		
+		drawEar(g);
+		drawMouth(g);
 		
 		
 		drawBackground(g);
