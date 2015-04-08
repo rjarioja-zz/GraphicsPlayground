@@ -585,6 +585,26 @@ public class Portrait extends Frame {
 		graph.setStroke(sketchLine);
 		graph.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
+		GeneralPath skinShade2 = new GeneralPath();
+		skinShade2.moveTo(434, 233);
+		skinShade2.curveTo(436, 218, 441, 219, 445, 226);
+		skinShade2.curveTo(457, 218, 447, 214, 435, 204);
+		skinShade2.curveTo(435, 183, 430, 182, 434, 169);
+		skinShade2.curveTo(435, 150, 418, 174, 373, 227);
+		skinShade2.curveTo(349, 237, 364, 251, 383, 250);
+		skinShade2.closePath();
+		graph.setColor(new Color(255, 130, 2));
+		graph.fill(skinShade2);
+		
+		GeneralPath skinShade3 = new GeneralPath();
+		skinShade3.moveTo(449, 280);
+		skinShade3.curveTo(458, 275, 458, 275, 445, 226);
+		//skinShade3.curveTo(457, 218, 447, 214, 435, 204);
+		//skinShade3.curveTo(435, 183, 430, 182, 434, 169);
+		//skinShade3.curveTo(435, 150, 418, 174, 373, 227);
+		graph.setColor(Color.black);
+		graph.draw(skinShade2);
+		
 		GeneralPath skinShade1 = new GeneralPath();
 		skinShade1.moveTo(360, 235);
 		skinShade1.lineTo(303, 278);
