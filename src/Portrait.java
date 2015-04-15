@@ -33,7 +33,7 @@ public class Portrait extends Frame {
 	
 	public Portrait() {
 		addWindowListener(new CloseHandler());
-		setTitle("\"It's feels weird being encapsulated into an object.\"");
+		setTitle("\"Portrait. Even though it's a profile.\"");
         setBackground(Color.white);
         setResizable(false);
 	}
@@ -73,40 +73,9 @@ public class Portrait extends Frame {
 		bg1.lineTo(0, 25);
 		bg1.closePath();
 		
-		GradientPaint gradient1 = new GradientPaint(252, 666, new Color(76, 126, 42), 0, 666, Color.white);
+		GradientPaint gradient1 = new GradientPaint(252, 333, new Color(103, 103, 103), 0, 666, Color.white);
 		graph.setPaint(gradient1);
 		graph.fill(bg1);
-		
-		bg2.moveTo(133, 25);
-		bg2.curveTo(143, 35, 124, 28, 120, 41);
-		bg2.curveTo(122, 45, 117, 51, 110, 47);
-		bg2.curveTo(106, 57, 119, 62, 114, 72);
-		bg2.curveTo(107, 73, 104, 65, 97, 65);
-		bg2.curveTo(109, 78, 113, 72, 118, 77);
-		bg2.curveTo(121, 85, 108, 89, 130, 93);
-		bg2.curveTo(137, 102, 127, 104, 135, 108);
-		bg2.curveTo(148, 138, 125, 106, 127, 144);
-		bg2.curveTo(162, 170, 146, 145, 158, 166);
-		bg2.curveTo(171, 175, 173, 156, 186, 184);
-		bg2.curveTo(189, 205, 205, 210, 205, 237);
-		bg2.curveTo(204, 260, 176, 305, 194, 321);
-		bg2.curveTo(210, 343, 239, 314, 226, 342);
-		bg2.curveTo(207, 348, 225, 378, 243, 367);
-		bg2.curveTo(241, 387, 254, 380, 242, 399);
-		bg2.curveTo(241, 423, 256, 426, 268, 416);
-		bg2.curveTo(284, 427, 257, 421, 281, 454);
-		bg2.curveTo(298, 469, 323, 472, 376, 456);
-		bg2.curveTo(383, 477, 412, 489, 408, 500);
-		bg2.curveTo(400, 508, 412, 507, 398, 525);
-		bg2.curveTo(394, 552, 374, 559, 370, 619);
-		bg2.curveTo(358, 645, 362, 648, 365, 665);
-		bg2.lineTo(0, 665);
-		bg2.lineTo(0, 25);
-		bg2.closePath();
-		
-		GradientPaint gradient2 = new GradientPaint(86, 666, new Color(80, 193, 68), 0, 666, Color.white);
-		graph.setPaint(gradient2);
-		//graph.fill(bg2);
 		
 		return graph;
 	}
@@ -596,14 +565,14 @@ public class Portrait extends Frame {
 		graph.setColor(new Color(255, 130, 2));
 		graph.fill(skinShade2);
 		
-		GeneralPath skinShade3 = new GeneralPath();
+		/*GeneralPath skinShade3 = new GeneralPath();
 		skinShade3.moveTo(449, 280);
 		skinShade3.curveTo(458, 275, 458, 275, 445, 226);
 		//skinShade3.curveTo(457, 218, 447, 214, 435, 204);
 		//skinShade3.curveTo(435, 183, 430, 182, 434, 169);
 		//skinShade3.curveTo(435, 150, 418, 174, 373, 227);
 		graph.setColor(Color.black);
-		graph.draw(skinShade2);
+		graph.draw(skinShade2);*/
 		
 		GeneralPath skinShade1 = new GeneralPath();
 		skinShade1.moveTo(360, 235);
@@ -634,13 +603,10 @@ public class Portrait extends Frame {
 	}
 	
 	public void paint(Graphics g) {
-
 		drawNose(g);
 		drawEye(g);
 		drawEar(g);
 		drawMouth(g);
-		
-		
 		drawBackground(g);
 		drawHairShades(g);
 		drawHair(g);
