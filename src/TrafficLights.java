@@ -234,7 +234,6 @@ public class TrafficLights extends Frame{
                 seconds = (int) (((new Date()).getTime() / 1000) % 60);
             }
         }
-        
     }
     
      public static void main(String[] args) throws InterruptedException  {
