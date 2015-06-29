@@ -18,7 +18,7 @@ public class Portrait extends Frame {
     BasicStroke hairLine = new BasicStroke(1.25f);
     BasicStroke outLine = new BasicStroke(1.75f);
 	//BasicStroke outLine = new BasicStroke(3.0f);
-    
+    //lol
 	//Colors
 	Color hairBlack = new Color(1, 1, 1);
 	Color hairBlue1 = new Color(3, 7, 55);
